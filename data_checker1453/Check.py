@@ -4,8 +4,8 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt 
 
-class Dashboard():
-    """ Dashboard class for quick insights form the data
+class Check():
+    """ Check class for quick insights from the data
     Attributes:
           df (pandas dataframe) representing the variable holding the table in question      
     """
@@ -32,6 +32,8 @@ class Dashboard():
         print('\n')
         print('Correlation Heatmap: ')
         sns.heatmap(self.data.corr(),xticklabels=False,square=True, cbar = False, annot_kws = {'fontsize':12, 'fontweight': 'bold'},cmap = 'viridis_r', annot = True, fmt = '.2f');
+        plt.show()
+        return self.data.head(5)
 
     
         
